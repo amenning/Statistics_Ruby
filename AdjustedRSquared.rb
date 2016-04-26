@@ -11,8 +11,7 @@
 # The determine_adjustment method determines the adjusted R2 based on starting R2, 
 # data size and number of regression coefficients including the intercept
 class AdjustedRSquared
-	attr_accessor :r_square, :data_size, :num_regression_coefficients
-	attr_reader	:adjusted_r_square
+	attr_reader :adjusted_r_square, :r_square, :data_size, :num_regression_coefficients
 	
 	def initialize(r_square, data_size, num_regression_coefficients)
 		@r_square = r_square
@@ -21,7 +20,7 @@ class AdjustedRSquared
 		update_adjustment(@r_square, @data_size, @num_regression_coefficients)
 	end
 	
-	def update_adjustment(r_square, data_size, num_regression_coefficients)
+	def update_adjustment(r_square=@r_square, data_size=@data_size, num_regression_coefficients=@num_regression_coefficients)
 		if validate_parameters
 			@adjusted_r_square = determine_adjustment(r_square, data_size, num_regression_coefficients)
 		else
