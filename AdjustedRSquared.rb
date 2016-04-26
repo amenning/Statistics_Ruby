@@ -4,9 +4,7 @@
 # Author::		Carl Andrew Menning 
 # Copyright:: 	Copyright (c) 2016 
 
-# This class accepts a three numbers upon initialization 
-# 
-# If not, it will request new user input until it only contains letters
+# This class accepts three numbers upon initialization 
 # 
 # The determine_adjustment method determines the adjusted R2 based on starting R2, 
 # data size and number of regression coefficients including the intercept
