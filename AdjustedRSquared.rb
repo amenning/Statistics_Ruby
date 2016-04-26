@@ -18,15 +18,26 @@ class AdjustedRSquared
 		@r_square = r_square
 		@data_size = data_size
 		@num_regression_coefficients = num_regression_coefficients
-		validate_parameters(r_square, data_size, num_regression_coefficients)
-		@adjusted_r_square = determine_adjustment(@r_square, @data_size, @num_regression_coefficients)
+		if validate_parameters
+			@adjusted_r_square = determine_adjustment(@r_square, @data_size, @num_regression_coefficients)
+		else
+			# Raise error
+		end
 	end
 	
 	def update_adjustment(r_square, data_size, num_regression_coefficients)
 		@adjusted_r_square = determine_adjustment(r_square, data_size, num_regression_coefficients)
 	end
 	
-	private	
+	private
+		def validate_parameters
+			if @data_size > @num_regression_coefficients
+				return true
+			else
+				return false
+			end
+		end
+		
 		def determine_adjustment(r_square, data_size, num_regression_coefficients)
 			# R2adj = 1 - (1-(R2))(#datapoints - 1)/(#datapoints - #model_variables)
 			# Need to use 1.0 to ensure floating point division
