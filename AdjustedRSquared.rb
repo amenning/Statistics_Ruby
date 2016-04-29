@@ -22,7 +22,7 @@ class AdjustedRSquared
 		if validate_parameters
 			@adjusted_r_square = determine_adjustment(r_square, data_size, num_regression_coefficients)
 		else
-			# Raise error
+			raise RangeError, "The parameters must all be numbers with data size (n) > 1, data size (n) greater than number of regression coefficients (k), and 0<=R^2<=1"
 		end
 	end
 	

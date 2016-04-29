@@ -1,7 +1,7 @@
 require './AdjustedRSquared'
 
 describe AdjustedRSquared do
-	before(:all) do
+	before(:each) do
 		@r_square = 0.9
 		@data_size = 50
 		@num_regression_coefficients = 5
@@ -14,37 +14,31 @@ describe AdjustedRSquared do
 	
 	it "verifies that the data size is greater than the number of regression coefficients" do
 		@data_size = 1
-		test = AdjustedRSquared.new(@r_square,@data_size,@num_regression_coefficients)
-		expect(test.adjusted_r_square).to be_nil
+		expect { AdjustedRSquared.new(@r_square,@data_size,@num_regression_coefficients) }.to raise_error(RangeError)
 	end
 
 	it "verifies that r_square is between 0 and 1" do
 		@r_square = 1.9
-		test = AdjustedRSquared.new(@r_square,@data_size,@num_regression_coefficients)
-		expect(test.adjusted_r_square).to be_nil
+		expect { AdjustedRSquared.new(@r_square,@data_size,@num_regression_coefficients) }.to raise_error(RangeError)
 	end
 	
 	it "verifies that input r_square is float or fixnum" do
 		@r_square = "A"
-		test = AdjustedRSquared.new(@r_square,@data_size,@num_regression_coefficients)
-		expect(test.adjusted_r_square).to be_nil
+		expect { AdjustedRSquared.new(@r_square,@data_size,@num_regression_coefficients) }.to raise_error(RangeError)
 	end
 
 	it "verifies that input data_size is fixnum or bignum" do
 		@data_size = "A"
-		test = AdjustedRSquared.new(@r_square,@data_size,@num_regression_coefficients)
-		expect(test.adjusted_r_square).to be_nil
+		expect { AdjustedRSquared.new(@r_square,@data_size,@num_regression_coefficients) }.to raise_error(RangeError)
 	end
 
 	it "verifies that input num_regression_coefficients is fixnum or bignum" do
 		@num_regression_coefficients = "A"
-		test = AdjustedRSquared.new(@r_square,@data_size,@num_regression_coefficients)
-		expect(test.adjusted_r_square).to be_nil
+		expect { AdjustedRSquared.new(@r_square,@data_size,@num_regression_coefficients) }.to raise_error(RangeError)
 	end
 
 	it "verifies that input num_regression_coefficients is greater than 0" do
 		@num_regression_coefficients = 0
-		test = AdjustedRSquared.new(@r_square,@data_size,@num_regression_coefficients)
-		expect(test.adjusted_r_square).to be_nil
+		expect { AdjustedRSquared.new(@r_square,@data_size,@num_regression_coefficients) }.to raise_error(RangeError)
 	end		
 end
