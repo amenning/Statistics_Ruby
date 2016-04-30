@@ -9,6 +9,11 @@
 # The determine_adjustment method determines the adjusted R2 based on starting R2, 
 # data size and number of regression coefficients including the intercept
 class AdjustedRSquared
+	# There are 4 variables
+	# :adjusted_r_square for the final calculated adjusted R2
+	# :r_square for the input R2 
+	# :data_size for the number of data points
+	# :num_regression_coefficients for the number of coefficients in the model equation (including the constant)
 	attr_reader :adjusted_r_square, :r_square, :data_size, :num_regression_coefficients
 	
 	# Initialize and determine adjusted R2 based on R2, data size, and number of coefficients

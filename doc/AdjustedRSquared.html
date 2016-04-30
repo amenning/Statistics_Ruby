@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class AdjustedRSquared - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-update_adjustment">#update_adjustment</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-AdjustedRSquared">
+  <h1 id="class-AdjustedRSquared" class="class">
+    class AdjustedRSquared
+  </h1>
+
+  <section class="description">
+    
+<p>This class accepts three numbers upon initialization  It determines the
+adjusted R2 based on the data size and number of regression coefficients
+The determine_adjustment method determines the adjusted R2 based on
+starting R2,  data size and number of regression coefficients including the
+intercept</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-adjusted_r_square" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">adjusted_r_square</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>There are 4 variables :adjusted_r_square for the final calculated adjusted
+R2 :r_square for the input R2  :data_size for the number of data points
+:num_regression_coefficients for the number of coefficients in the model
+equation (including the constant)</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-data_size" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">data_size</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>There are 4 variables :adjusted_r_square for the final calculated adjusted
+R2 :r_square for the input R2  :data_size for the number of data points
+:num_regression_coefficients for the number of coefficients in the model
+equation (including the constant)</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-num_regression_coefficients" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">num_regression_coefficients</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>There are 4 variables :adjusted_r_square for the final calculated adjusted
+R2 :r_square for the input R2  :data_size for the number of data points
+:num_regression_coefficients for the number of coefficients in the model
+equation (including the constant)</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-r_square" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">r_square</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>There are 4 variables :adjusted_r_square for the final calculated adjusted
+R2 :r_square for the input R2  :data_size for the number of data points
+:num_regression_coefficients for the number of coefficients in the model
+equation (including the constant)</p>
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(r_square, data_size, num_regression_coefficients)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Initialize and determine adjusted R2 based on R2, data size, and number of
+coefficients</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File AdjustedRSquared.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">r_square</span>, <span class="ruby-identifier">data_size</span>, <span class="ruby-identifier">num_regression_coefficients</span>)
+        <span class="ruby-ivar">@r_square</span> = <span class="ruby-identifier">r_square</span>
+        <span class="ruby-ivar">@data_size</span> = <span class="ruby-identifier">data_size</span>
+        <span class="ruby-ivar">@num_regression_coefficients</span> = <span class="ruby-identifier">num_regression_coefficients</span>
+        <span class="ruby-identifier">update_adjustment</span>(<span class="ruby-ivar">@r_square</span>, <span class="ruby-ivar">@data_size</span>, <span class="ruby-ivar">@num_regression_coefficients</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-update_adjustment" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_adjustment</span><span
+            class="method-args">(r_square=@r_square, data_size=@data_size, num_regression_coefficients=@num_regression_coefficients)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Update instance R2 based on new R2, data size or number of regression
+coefficients, all inputs have default values to current instance values</p>
+          
+          
+
+          
+          <div class="method-source-code" id="update_adjustment-source">
+            <pre><span class="ruby-comment"># File AdjustedRSquared.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_adjustment</span>(<span class="ruby-identifier">r_square</span>=<span class="ruby-ivar">@r_square</span>, <span class="ruby-identifier">data_size</span>=<span class="ruby-ivar">@data_size</span>, <span class="ruby-identifier">num_regression_coefficients</span>=<span class="ruby-ivar">@num_regression_coefficients</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">validate_parameters</span>
+                <span class="ruby-ivar">@adjusted_r_square</span> = <span class="ruby-identifier">determine_adjustment</span>(<span class="ruby-identifier">r_square</span>, <span class="ruby-identifier">data_size</span>, <span class="ruby-identifier">num_regression_coefficients</span>)
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">raise</span> <span class="ruby-constant">RangeError</span>, <span class="ruby-string">&quot;The parameters must all be numbers with data size (n) &gt; 1, data size (n) greater than number of regression coefficients (k), and 0&lt;=R^2&lt;=1&quot;</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
